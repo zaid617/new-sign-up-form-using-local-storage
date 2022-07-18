@@ -10,7 +10,7 @@
 <body onload="getAllUsers()">
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form onsubmit="move(); return false">
           <div class="user-box">
             <input type="number" id="num">
             <label>Number</label>
@@ -19,13 +19,13 @@
             <input type="password" id="pass">
             <label>Password</label>
           </div>
-          <a type="submit">
+          <button class="a" type="submit">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Submit
-          </a>
+        </button>
         </form>
       </div>
     <script src="app.js"></script>
