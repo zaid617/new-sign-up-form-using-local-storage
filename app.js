@@ -1,11 +1,15 @@
 let users = []
+let loggdins = {}
 let page=window.location.href.split("/");
 page=page
 console.log(page)
 
 function AllUsers(){
     let takeUser=localStorage.getItem("usersItem")
+    let loggdin = localStorage.getItem("LoginItem")
+    users=JSON.parse(loggdins)||{}
     users=JSON.parse(takeUser)||[]
+
 }
 AllUsers()
 
@@ -45,6 +49,12 @@ const signup = () => {
     }
 }
 
+function dashboard() {
+    document.getElementById('name2').innerHTML = loggdins.userFirstName
+    document.getElementById('dob2').innerHTML = loggdins.userFirstName
+    document.getElementById('number2').innerHTML = loggdins.userFirstName
+}
+
 const login = () => {
     let LoginEmail = document.getElementById("num").value
     let Loginpass = document.getElementById("pass").value
@@ -55,21 +65,18 @@ const login = () => {
 
     for (let i = 0; i < users.length; i++) {
 
-        if (users[i].userEmail === LoginEmail && users[i].userPass === Loginpass) {
+        if (users[i].userEmail == LoginEmail && users[i].userPass == Loginpass) {
             
                 isMatch = true
-                localStorage.setItem("LoginItem",JSON.stringify(users[i].userFirstName))
+                localStorage.setItem("LoginItem",JSON.stringify(users[i]))
                 window.location.href="./dashboard.html";
             
         }
 
-                let Email = users[i].userEmail;
-                let name = users[i].userFirstName + users[i].surName
-                let date = users[i].dob
-
     }
     if (!isMatch) {
         alert("Your Information is incorrect!")
+        return 0;
     }
         
                 
