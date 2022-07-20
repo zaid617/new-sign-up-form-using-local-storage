@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body onload="show() , getAllUsers()">
-    <div class="box">
+<body onload="dashboard()">
+    <div class="login-box">
         <div class="main">
-            <p id="details"></p>
+            <p id="name2"></p>
+            <p id="number2"></p>
+            <p id="gender2"></p>
+            <p id="dob2"></p>
         </div>
+    
+    <button class="a" onclick="logout()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        log out
+    </button>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

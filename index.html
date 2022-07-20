@@ -9,13 +9,13 @@
     <title>Document</title>
 </head>
 
-<body onload="getAllUsers()">
+<body>
     <div class="login-box">
 
         <h2>Sign Up</h2>
        
 
-        <form onsubmit="add(); return false">
+        <form onsubmit="signup(); return false">
           <div class="user-box">
             <input type="text" id="firstName" required>
             <label>First Name</label>
@@ -25,113 +25,29 @@
             <label>Surname</label>
           </div>
           <div class="user-box">
-            <input type="number" id="number" required maxlength="12" minlength="12">
+            <input type="number" id="number" title="mobile num starts with +92 and contain 12 numbers" required maxlength="12" minlength="11">
             <label>Mobile Number</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required id="password">
+            <input type="password" name="" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             <label>Password</label>
           </div>
           <div class="user-box">
-            <select name="month" class="date" required id="month">
-
-
-                <option name="month" value="Jan.">Jan.</option>
-                <option name="month" value="Feb.">Feb.</option>
-                <option name="month" value="Mar.">Mar.</option>
-                <option name="month" value="Apr.">Apr.</option>
-                <option name="month" value="May">May</option>
-                <option name="month" value="Jun.">Jun.</option>
-                <option name="month" value="Jul.">Jul.</option>
-                <option name="month" value="Aug.">Aug.</option>
-                <option name="month" value="Sep.">Sep.</option>
-                <option name="month" value="Oct.">Oct.</option>
-                <option name="month" value="Nov.">Nov.</option>
-                <option name="month" value="Dec.">Dec.</option>
-            </select>
-
-            <select name="date" class="date" required id="date">
-
-                <option name="date" value="1">1</option>
-                <option name="date" value="2">2</option>
-                <option name="date" value="3">3</option>
-                <option name="date" value="4">4</option>
-                <option name="date" value="5">5</option>
-                <option name="date" value="6">6</option>
-                <option name="date" value="7">7</option>
-                <option name="date" value="8">8</option>
-                <option name="date" value="9">9</option>
-                <option name="date" value="10">10</option>
-                <option name="date" value="11">11</option>
-                <option name="date" value="12">12</option>
-                <option name="date" value="13">13</option>
-                <option name="date" value="14">14</option>
-                <option name="date" value="15">15</option>
-                <option name="date" value="16">16</option>
-                <option name="date" value="17">17</option>
-                <option name="date" value="18">18</option>
-                <option name="date" value="19">19</option>
-                <option name="date" value="20">20</option>
-                <option name="date" value="21">21</option>
-                <option name="date" value="22">22</option>
-                <option name="date" value="23">23</option>
-                <option name="date" value="24">24</option>
-                <option name="date" value="25">25</option>
-                <option name="date" value="26">26</option>
-                <option name="date" value="27">27</option>
-                <option name="date" value="28">28</option>
-                <option name="date" value="29">29</option>
-                <option name="date" value="30">30</option>
-                <option name="date" value="31">31</option>
-            </select>
-
-            <select name="year" class="date" required id="year">
-
-                <option name="year" value="1990">1990</option>
-                <option name="year" value="1990">1991</option>
-                <option name="year" value="1990">1992</option>
-                <option name="year" value="1990">1993</option>
-                <option name="year" value="1990">1994</option>
-                <option name="year" value="1990">1995</option>
-                <option name="year" value="1990">1996</option>
-                <option name="year" value="1990">1997</option>
-                <option name="year" value="1990">1998</option>
-                <option name="year" value="1990">1999</option>
-                <option name="year" value="1990">2000</option>
-                <option name="year" value="1990">2001</option>
-                <option name="year" value="1990">2002</option>
-                <option name="year" value="1990">2003</option>
-                <option name="year" value="1990">2004</option>
-                <option name="year" value="1990">2005</option>
-                <option name="year" value="1990">2006</option>
-                <option name="year" value="1990">2007</option>
-                <option name="year" value="1990">2008</option>
-                <option name="year" value="1990">2009</option>
-                <option name="year" value="1990">2010</option>
-                <option name="year" value="1990">2011</option>
-                <option name="year" value="1990">2012</option>
-                <option name="year" value="1990">2013</option>
-                <option name="year" value="1990">2014</option>
-                <option name="year" value="1990">2015</option>
-                <option name="year" value="1990">2016</option>
-                <option name="year" value="1990">2017</option>
-                <option name="year" value="1990">2018</option>
-                <option name="year" value="1990">2019</option>
-                <option name="year" value="1990">2020</option>
-                <option name="year" value="1990">2021</option>
-                <option name="year" value="1990">2022</option>
-            </select>
+            <input type="password" name="" required id="cpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <label>Confirm Password</label>
           </div>
-          
+            <div class="user-box">
+              <input type="date" required id="dob" value="1990-01-01" max="2010-01-01">
+            </div>
             <div class="gender-box">
                 <label for="male" class="gender">Male : <input checked required type="radio"
-                    value="male" name="gender" id="male" value="male"></label>
+                    value="male" name="gender" id="male" ></label>
 
             <label for="female" class="gender">Female : <input required type="radio" name="gender"
-                    value="female" id="female" value="female"></label>
+                    value="female" id="female"></label>
 
             <label for="other" class="gender">Other : <input required type="radio" name="gender"
-                    value="other" id="other" value="other"></label>
+                    value="other" id="other"></label>
             </div>
             
           <button class="a" type="submit">
@@ -145,6 +61,7 @@
         </form>
        <div class="center"><a class="anchor" href="./sign-in.html">Already Sign In!</a></div> 
       </div>
+
     <script src="app.js"></script>
 </body>
 
