@@ -7,7 +7,7 @@ console.log(page)
 function AllUsers(){
     let takeUser=localStorage.getItem("usersItem")
     let loggdin = localStorage.getItem("LoginItem")
-    users=JSON.parse(loggdins)||{}
+    loggdins=JSON.parse(loggdin)||{}
     users=JSON.parse(takeUser)||[]
 
 }
