@@ -15,42 +15,32 @@
         <h2>Sign Up</h2>
        
 
-        <form >
+        <form onsubmit="signup(); return false">
           <div class="user-box">
-            <input type="text" id="firstName" title="name does not contains a number" pattern="(?=.*[a-z])(?=.*[A-Z])" required>
+            <input type="text" id="firstName" title="name does not contains a number"  required>
             <label>First Name</label>
           </div>
           <div class="user-box">
-            <input type="text" id="surName" title="name does not contains a number" pattern="(?=.*[a-z])(?=.*[A-Z])" required>
+            <input type="text" id="surName" title="name does not contains a number" required>
             <label>Surname</label>
           </div>
           <div class="user-box">
-            <input type="number" id="number" class="inval" title="mobile num starts with +92 and contain 12 numbers" required maxlength="12" minlength="11">
+            <input type="number" id="number" title="mobile num starts with +92 and contain 12 numbers" required maxlength="12" minlength="11">
             <label>Mobile Number</label>
           </div>
           <div class="user-box">
-            <input type="password" class="inval" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <input type="password" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             <label>Password</label>
           </div>
           <div class="user-box">
-            <input type="password" class="inval" name="" required id="cpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <input type="password"  required id="cpassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             <label>Confirm Password</label>
+            <p id="error" class="error">password does't match</p>
           </div>
             <div class="user-box">
-              <input type="date" required id="dob" value="1990-01-01" max="2010-01-01">
+              <input type="date" required id="dob" value="1990-01-01">
             </div>
-            <div class="gender-box">
-                <label for="male" class="gender">Male : <input checked required type="radio"
-                    value="male" name="gender" id="male" ></label>
-
-            <label for="female" class="gender">Female : <input required type="radio" name="gender"
-                    value="female" id="female"></label>
-
-            <label for="other" class="gender">Other : <input required type="radio" name="gender"
-                    value="other" id="other"></label>
-            </div>
-            
-          <button class="a" onclick="signup()">
+          <button class="a" type="submit">
             <span></span>
             <span></span>
             <span></span>

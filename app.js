@@ -13,6 +13,13 @@ function AllUsers(){
 }
 AllUsers()
 
+function dashboard() {
+    
+    document.getElementById('name2').innerHTML ="Name :" + loggdins.userFirstName
+    document.getElementById('dob2').innerHTML ="Date of birth :" + loggdins.dob
+    document.getElementById('number2').innerHTML ="Mobile: " + loggdins.userEmail
+}
+
 const signup = () => {
     console.log("users Entry:", users)
     let fName = document.getElementById("firstName").value
@@ -45,14 +52,11 @@ const signup = () => {
         window.location.href = "./sign-in.html"
     }
     else {
-        alert("Password Dont Match")
+        error.style.display = 'block'
+        setTimeout(function () {
+            error.style.display = 'none'
+        }, 3000)
     }
-}
-
-function dashboard() {
-    document.getElementById('name2').innerHTML = loggdins.userFirstName
-    document.getElementById('dob2').innerHTML = loggdins.userFirstName
-    document.getElementById('number2').innerHTML = loggdins.userFirstName
 }
 
 const login = () => {

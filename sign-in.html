@@ -10,7 +10,7 @@
 <body >
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form onsubmit="login(); return false">
           <div class="user-box">
             <input type="number" id="num">
             <label>Number</label>
@@ -19,13 +19,14 @@
             <input type="password" id="pass">
             <label>Password</label>
           </div>
-          <button class="a" onclick="login()">
+          <button class="a" type="submit">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Submit
         </button>
+        <div class="center"><a class="anchor" href="./index.html">Not Sign up yet!</a></div> 
         </form>
       </div>
     <script src="app.js"></script>
