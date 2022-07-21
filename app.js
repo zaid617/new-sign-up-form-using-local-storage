@@ -21,13 +21,14 @@ function dashboard() {
 }
 
 const signup = () => {
-    console.log("users Entry:", users)
     let fName = document.getElementById("firstName").value
     let surName = document.getElementById("surName").value
     let email = document.getElementById("number").value
     let password = document.getElementById("password").value
     let cpassword = document.getElementById("cpassword").value
     let dob = document.getElementById("dob").value
+    let error2 = document.getElementById(error2)
+    let error = document.getElementById(error)
 
    
     
@@ -42,7 +43,10 @@ const signup = () => {
         }
         for (let i = 0; i < users.length; i++) {
             if (users[i].userEmail === email) {
-                alert("user already exist")
+                error2.style.display = 'block'
+                setTimeout(function () {
+                    error2.style.display = 'none'
+                }, 3000)
                 return 0;
             }
         }
