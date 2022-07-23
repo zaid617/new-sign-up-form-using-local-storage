@@ -15,13 +15,13 @@
         <h2>Sign Up</h2>
        
 
-        <form onsubmit="signup(); return false">
+        <form onsubmit="signup(); return false" autocomplete="off">
           <div class="user-box">
-            <input type="text" id="firstName" autocomplete="false" title="name does not contains a number"  required>
+            <input type="text" id="firstName" title="name does not contains a number" name="hidden"  required>
             <label>First Name</label>
           </div>
           <div class="user-box">
-            <input type="text" id="surName" title="name does not contains a number" required>
+            <input type="text" id="surName" name="hidden" title="name does not contains a number" required>
             <label>Surname</label>
           </div>
           <div class="user-box">

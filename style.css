@@ -214,7 +214,7 @@ input::-webkit-inner-spin-button {
   color: red;
   width: 250px;
   position: absolute;
-  top: -35px;
+  top: 16px;
   padding: 5px;
   border: 1px solid red;
   border-radius: 5px;
