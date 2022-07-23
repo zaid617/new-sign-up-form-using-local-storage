@@ -13,6 +13,16 @@ function AllUsers(){
 }
 AllUsers()
 
+let locationCheck = () => {
+    let user = JSON.parse(localStorage.getItem("LoginItem"));
+    if (user) {
+        location.href = "./dashboard.html";
+    }
+}
+
+
+
+
 function dashboard() {
     
     document.getElementById('name2').innerHTML ="Name :" + loggdins.userFirstName
