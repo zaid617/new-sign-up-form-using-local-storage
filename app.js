@@ -76,6 +76,7 @@ const signup = () => {
 const login = () => {
     let LoginEmail = document.getElementById("num").value
     let Loginpass = document.getElementById("pass").value
+    let error3 = document.getElementById('error3');
     console.log(LoginEmail)
     console.log(Loginpass)
 
@@ -93,7 +94,10 @@ const login = () => {
 
     }
     if (!isMatch) {
-        alert("Your Information is incorrect!")
+        error3.style.display = 'block'
+    setTimeout(function () {
+        error3.style.display = 'none'
+    }, 3000)
         return 0;
     }
         
