@@ -27,8 +27,8 @@ const signup = () => {
     let password = document.getElementById("password").value
     let cpassword = document.getElementById("cpassword").value
     let dob = document.getElementById("dob").value
-    let error2 = document.getElementById(error2)
-    let error = document.getElementById(error)
+    let error2 = document.getElementById('error2')
+    let error = document.getElementById('error')
 
    
     
